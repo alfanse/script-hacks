@@ -18,6 +18,7 @@ alias ducks='du -cks * | sort -rn | head'
 alias duha='du -ha | sort -rh | head -n 20'
 
 # ide aliases
+alias idea='/mnt/c/Program\ Files\ \(x86\)/JetBrains/IntelliJ\ IDEA\ Community\ Edition\ 2025.1.1.1/bin/idea64.exe'
 alias -g wf="~/windsurf-launcher.sh ."
 
 # When you absolutely, positively got to kill every instance in docker.
