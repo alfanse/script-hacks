@@ -17,6 +17,9 @@ alias mcv='mvn clean verify'
 alias ducks='du -cks * | sort -rn | head'
 alias duha='du -ha | sort -rh | head -n 20'
 
+# ide aliases
+alias -g wf="~/windsurf-launcher.sh ."
+
 # When you absolutely, positively got to kill every instance in docker.
 killalldocker()
 {
