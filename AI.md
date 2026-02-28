@@ -14,3 +14,6 @@ IDE for pairing with AI, has Intellij Plugin called Cascade
 2025-5-15 zoom with Travis Myers <travis.myers@windsurf.com> 
 and Berry Yirrell <berry.yirrell@windsurf.com>
 
+# Claude Code
+* [claude-notes.md](ubuntu/claude-notes.md)
+

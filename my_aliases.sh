@@ -17,8 +17,18 @@ alias mcv='mvn clean verify'
 alias ducks='du -cks * | sort -rn | head'
 alias duha='du -ha | sort -rh | head -n 20'
 
-# alias idea='/mnt/c/Program\ Files\ \(x86\)/JetBrains/IntelliJ\ IDEA\ Community\ Edition\ 2025.1.1.1/bin/idea64.exe'
-alias idea='/mnt/c/Program\ Files/JetBrains/IntelliJ\ IDEA\ Community\ Edition\ 2025.2.4/bin/idea64.exe'
+# IntelliJ IDEA alias - path varies by OS
+if [[ "$OSTYPE" == "darwin"* ]]; then
+    # macOS
+    alias idea='/Applications/IntelliJ\ IDEA\ CE.app/Contents/MacOS/idea'
+elif grep -qi microsoft /proc/version 2>/dev/null; then
+    # WSL (Windows)
+    # alias idea='/mnt/c/Program\ Files\ \(x86\)/JetBrains/IntelliJ\ IDEA\ Community\ Edition\ 2025.1.1.1/bin/idea64.exe'
+    alias idea='/mnt/c/Program\ Files/JetBrains/IntelliJ\ IDEA\ Community\ Edition\ 2025.2.4/bin/idea64.exe'
+elif [[ "$OSTYPE" == "linux-gnu"* ]]; then
+    # Linux
+    alias idea='intellij-idea . &'
+fi
 
 #alias wf="$(dirname "$BASH_SOURCE")/windsurf-launcher.sh ."
 
