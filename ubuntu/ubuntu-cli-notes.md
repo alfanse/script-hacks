@@ -40,3 +40,35 @@ git clone https://github.com/rbreaves/kinto.git
 cd kinto
 ./setup.py
 ```
+
+# systemd Service
+For a reliable mount on boot, a systemd user service is more robust than cron — it handles network dependencies properly:
+
+Users path to systemd config: `~/.config/systemd/user/`
+
+## systemctl commands
+
+```bash
+# Show all services and their state:
+systemctl --type=service --state=active list-units
+
+# Show currently running services:
+systemctl --type=service --state=running list-units
+```
+
+# Crontab 
+How to use crontab: https://help.ubuntu.com/community/CronHowto
+
+Users crontab files are located in this directory `/var/spool/cron/crontabs`
+
+Cron jobs run are all logged by default to `/var/log/syslog`
+
+## contab commands
+
+```bash
+# List
+crontab -l
+
+# edit
+crontab -e
+```

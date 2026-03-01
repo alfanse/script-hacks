@@ -1,0 +1,15 @@
+  [Unit]
+  Description=rclone gdrive mount
+  After=network-online.target
+
+  [Service]
+  Type=notify
+  ExecStart=/usr/bin/rclone mount gdrive: /home/alfanse/gdrive \
+     --vfs-cache-mode writes \
+     --log-file "/home/alfanse/rclone.log" \
+     --log-level INFO
+  ExecStop=/bin/fusermount -u /home/alfanse/gdrive
+  Restart=on-failure
+
+  [Install]
+  WantedBy=default.target
