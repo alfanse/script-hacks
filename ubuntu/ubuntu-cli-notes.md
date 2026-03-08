@@ -25,6 +25,8 @@ sudo apt install zip unzip
 sudo apt install nodejs npm -y
 sudo apt install curl
 sudo apt install ripgrep
+sudo apt install net-tools # netstat
+sudo apt install xclip # pbcopy/paste equivilent
 
 # github cli
 sudo apt install gh
@@ -71,4 +73,15 @@ crontab -l
 
 # edit
 crontab -e
+```
+
+# pbcopy/pbpaste with xclip
+xclip is the most popular tool for command line clipboard
+```bash
+# install
+sudo apt-get install -y xclip
+
+# aliases
+alias pbcopy='xclip -selection clipboard'
+alias pbpaste='xclip -selection clipboard -o'
 ```
